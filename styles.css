@@ -225,6 +225,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 24px 40px;
     mix-blend-mode: difference;
     color: #fff;
@@ -254,6 +255,7 @@ a {
     font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    margin-left: auto;
 }
 
 .nav .links a {
@@ -274,6 +276,33 @@ a {
 
 .nav .links a:hover::after {
     width: 100%;
+}
+
+.language-toggle {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.language-toggle span {
+    opacity: 0.45;
+}
+
+.language-toggle .active {
+    opacity: 1;
 }
 
 
@@ -548,25 +577,31 @@ a {
     border-top: 1px solid currentColor;
     border-bottom: 1px solid currentColor;
     overflow: hidden;
-    padding: 24px 0;
+    padding: clamp(14px, 2.2vw, 22px) 0;
     position: relative;
+    max-width: 100%;
+    contain: paint;
 }
 
 .marquee-track {
-    display: flex;
-    gap: 64px;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    gap: clamp(28px, 5vw, 56px);
     white-space: nowrap;
     font-family: var(--font-display);
-    font-size: clamp(48px, 9vw, 140px);
+    font-size: clamp(34px, 6vw, 96px);
     text-transform: uppercase;
     letter-spacing: -0.03em;
-    line-height: 1;
+    line-height: 0.9;
     will-change: transform;
     contain: layout style;
 }
 
 .marquee-track .star {
     color: var(--red);
+    font-size: 0.72em;
+    letter-spacing: 0;
 }
 
 .marquee-track .outline {
@@ -631,6 +666,7 @@ a {
     background: #111110;
     color: var(--paper);
     border-radius: 4px;
+    border: 0.5px solid rgba(255, 255, 255, 0.07);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -921,6 +957,7 @@ a {
     background: radial-gradient(ellipse 120% 90% at 55% 45%, color-mix(in oklab, var(--mood-glow) 20%, var(--mood-soft)) 0%, var(--mood-soft) 62%);
     overflow: hidden;
     transition: background 1.2s var(--ease-out);
+    isolation: isolate;
 }
 
 .moment-cultural-grid {
@@ -979,6 +1016,7 @@ a {
     display: flex;
     align-items: flex-end;
     padding: 24px;
+    isolation: isolate;
 }
 
 .moment-cultural .visual-tile::before {
@@ -1005,6 +1043,22 @@ a {
     z-index: 0;
     mix-blend-mode: normal;
     display: block;
+}
+
+[data-chapter="aj1"] .archival-tile-img {
+    object-position: center 18%;
+}
+
+[data-chapter="aj2"] .archival-tile-img {
+    object-position: center 22%;
+}
+
+[data-chapter="aj3"] .archival-tile-img {
+    object-position: center 28%;
+}
+
+[data-chapter="aj4"] .archival-tile-img {
+    object-position: center 20%;
 }
 
 [data-mood="dark"] .archival-tile-img {
@@ -1062,23 +1116,22 @@ a {
 
 .moment-cultural .visual-tile .tile-num {
     font-family: var(--font-display);
-    font-size: clamp(80px, 10vw, 160px);
+    font-size: clamp(64px, 8vw, 128px);
     line-height: 0.85;
     letter-spacing: -0.05em;
     color: var(--mood-accent);
     position: absolute;
-    top: 20px;
-    left: 20px;
-    opacity: 0.9;
+    top: auto;
+    left: auto;
+    bottom: -14px;
+    right: 14px;
+    opacity: 0.42;
     z-index: 2;
+    pointer-events: none;
 }
 
 [data-mood="dark"] .moment-cultural .visual-tile .tile-num {
-    top: auto;
-    bottom: -22px;
-    left: auto;
-    right: 14px;
-    opacity: 0.78;
+    opacity: 0.32;
 }
 
 .moment-cultural .visual-tile .tile-cap {
@@ -1099,17 +1152,20 @@ a {
     border-top: 1px solid currentColor;
     border-bottom: 1px solid currentColor;
     font-family: var(--font-display);
-    font-size: clamp(28px, 3.5vw, 56px);
+    font-size: clamp(22px, 3vw, 46px);
     letter-spacing: -0.02em;
     text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
     grid-column: 1 / -1;
+    max-width: 100%;
 }
 
 .cultural-marquee-track {
     display: inline-flex;
-    gap: 48px;
+    align-items: center;
+    width: max-content;
+    gap: clamp(24px, 4vw, 44px);
     animation: cultMarquee 18s linear infinite;
     will-change: transform;
 }
@@ -1121,6 +1177,8 @@ a {
 
 .cultural-marquee-track>span.dot {
     color: var(--mood-accent);
+    -webkit-text-stroke: 0;
+    font-size: 0.74em;
 }
 
 @keyframes cultMarquee {
@@ -1909,6 +1967,31 @@ a {
     letter-spacing: -0.04em;
     color: rgba(243, 239, 231, 0.04);
     pointer-events: none;
+}
+
+
+/* ============================================
+   MOMENT TAG — section eyebrow (editorial microcopy)
+   ============================================ */
+
+.moment-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.42;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.moment-tag::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: currentColor;
+    flex-shrink: 0;
 }
 
 
