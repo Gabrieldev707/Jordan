@@ -27,13 +27,17 @@ export const CHAPTERS = [
       archivalPhoto: "MichaelJordan/MJ1.png",
       archivalPosition: "center 18%",
       en: {
-        title: "The fine they paid for him",
-        body: "A reported $5,000 per game whenever he laced them — a violation of the league's color rules at the time. The league's letter became the marketing campaign. Banned became a verb. A counterculture was suddenly wearing high-tops.",
+        title: "THE FINE THEY PAID FOR HIM!",
+        caption: "In 1985, every on-court appearance in the Air Jordan became an act of defiance. The league considered the model outside the visual rules of the era, and with every game, the punishment helped turn the shoe into legend.",
+        footer: "— The beginning of rebellion, 1985",
+        body: "In 1985, every on-court appearance in the Air Jordan became an act of defiance. The league considered the model outside the visual rules of the era, and with every game, the punishment helped turn the shoe into legend.",
         archivalAlt: "Michael Jordan on court, 1985 — the season the fines began"
       },
       pt: {
-        title: "A multa que pagaram por ele",
-        body: "Relatos falam em US$5.000 por jogo sempre que ele os calçava — uma violação das regras de cores da liga na época. A carta da liga virou campanha de marketing. Banido virou verbo. De repente, uma contracultura estava usando cano alto.",
+        title: "A MULTA QUE PAGARAM POR ELE!",
+        caption: "Em 1985, cada aparição em quadra com o Air Jordan virou um ato de desafio. A liga considerava o modelo fora das regras visuais da época e, a cada jogo, a punição ajudava a transformar o tênis em lenda.",
+        footer: "— O começo da rebeldia, 1985",
+        body: "Em 1985, cada aparição em quadra com o Air Jordan virou um ato de desafio. A liga considerava o modelo fora das regras visuais da época e, a cada jogo, a punição ajudava a transformar o tênis em lenda.",
         archivalAlt: "Michael Jordan em quadra, 1985 — a temporada em que as multas começaram"
       }
     },
@@ -87,13 +91,17 @@ export const CHAPTERS = [
       archivalPhoto: "MichaelJordan/MJ23.png",
       archivalPosition: "center 22%",
       en: {
-        title: "The shoe that was 'too quiet'",
-        body: "Coming after the loudest debut in the history of the sport, the Two whispered. Sales disappointed. Collectors today call it the most underrated of the early line — the moment the brand tried to grow up before its audience was ready.",
+        title: "TOO SOPHISTICATED FOR ITS TIME.",
+        caption: "Rather than follow the obvious formula of the previous success, the Air Jordan 2 leaned into premium finishing and a more mature language. It was misunderstood at launch, but earned respect over time.",
+        footer: "— The most underestimated chapter, 1986",
+        body: "Rather than follow the obvious formula of the previous success, the Air Jordan 2 leaned into premium finishing and a more mature language. It was misunderstood at launch, but earned respect over time.",
         archivalAlt: "Michael Jordan, 1986"
       },
       pt: {
-        title: "O tênis que era 'silencioso demais'",
-        body: "Depois da estreia mais barulhenta da história do esporte, o Two sussurrou. As vendas decepcionaram. Colecionadores hoje o chamam de o mais subestimado da linha inicial — o momento em que a marca tentou amadurecer antes de seu público estar pronto.",
+        title: "SOFISTICADO DEMAIS PARA O SEU TEMPO.",
+        caption: "Sem seguir a fórmula óbvia do sucesso anterior, o Air Jordan 2 apostou em acabamento premium e linguagem mais madura. Foi incompreendido no lançamento, mas ganhou respeito com o tempo.",
+        footer: "— O capítulo mais subestimado, 1986",
+        body: "Sem seguir a fórmula óbvia do sucesso anterior, o Air Jordan 2 apostou em acabamento premium e linguagem mais madura. Foi incompreendido no lançamento, mas ganhou respeito com o tempo.",
         archivalAlt: "Michael Jordan, 1986"
       }
     },
@@ -147,13 +155,17 @@ export const CHAPTERS = [
       archivalPhoto: "MichaelJordan/MJ3.png",
       archivalPosition: "center 28%",
       en: {
-        title: "Spike and the elephant",
-        body: "A filmmaker as the campaign's voice. A character named Mars. A side-panel print borrowed from the savannah. The shoe walked off-court and into rotation as a cultural artifact — the first sneaker designed to be looked at, not just played in.",
+        title: "THE SHOE THAT MADE HIM STAY!",
+        caption: "When the relationship with the brand seemed close to ending, the Air Jordan 3 changed everything. With Tinker Hatfield's design, elephant print, visible Air unit, and a new visual language, it did not just save the line — it saved the story.",
+        footer: "— The reunion that changed everything, 1988",
+        body: "When the relationship with the brand seemed close to ending, the Air Jordan 3 changed everything. With Tinker Hatfield's design, elephant print, visible Air unit, and a new visual language, it did not just save the line — it saved the story.",
         archivalAlt: "Michael Jordan and Spike Lee, 1988"
       },
       pt: {
-        title: "Spike e o elephant print",
-        body: "Um cineasta como voz da campanha. Um personagem chamado Mars. Uma estampa lateral emprestada da savana. O tênis saiu da quadra e entrou na rotação como artefato cultural — o primeiro sneaker desenhado para ser visto, não apenas usado em jogo.",
+        title: "O TÊNIS QUE O FEZ FICAR!",
+        caption: "Quando a relação com a marca parecia perto do fim, o Air Jordan 3 mudou tudo. Com design de Tinker Hatfield, elephant print, unidade Air visível e uma nova linguagem visual, ele não apenas salvou a linha — salvou a história.",
+        footer: "— O reencontro que mudou tudo, 1988",
+        body: "Quando a relação com a marca parecia perto do fim, o Air Jordan 3 mudou tudo. Com design de Tinker Hatfield, elephant print, unidade Air visível e uma nova linguagem visual, ele não apenas salvou a linha — salvou a história.",
         archivalAlt: "Michael Jordan e Spike Lee, 1988"
       }
     },
@@ -207,13 +219,17 @@ export const CHAPTERS = [
       archivalPhoto: "MichaelJordan/MJ4.jpg",
       archivalPosition: "center 20%",
       en: {
-        title: "Do the right thing",
-        body: "A pivotal scene in a generational film. A pair of white-cement Fours scuffed on a Brooklyn stoop. The shoe became shorthand for a moment, a borough, an argument about value and what's worth defending. Pop culture had folded the silhouette in.",
+        title: "WHEN THE SHOE ENTERED THE SCENE.",
+        caption: "With the Air Jordan 4, the impact moved beyond the court and into the streets, culture, and cinema. The silhouette stopped being only performance and began to live in the collective imagination of a generation.",
+        footer: "— From the court to culture, 1989",
+        body: "With the Air Jordan 4, the impact moved beyond the court and into the streets, culture, and cinema. The silhouette stopped being only performance and began to live in the collective imagination of a generation.",
         archivalAlt: "Michael Jordan, 1989"
       },
       pt: {
-        title: "Faça a coisa certa",
-        body: "Uma cena decisiva em um filme geracional. Um par de Fours white-cement riscado numa calçada do Brooklyn. O tênis virou abreviação de um momento, de um bairro, de uma discussão sobre valor e sobre o que merece ser defendido. A cultura pop havia incorporado a silhueta.",
+        title: "QUANDO O TÊNIS ENTROU EM CENA.",
+        caption: "Com o Air Jordan 4, o impacto saiu das quadras e ganhou as ruas, a cultura e o cinema. A silhueta deixou de ser só performance e passou a ocupar também o imaginário coletivo de uma geração.",
+        footer: "— Da quadra para a cultura, 1989",
+        body: "Com o Air Jordan 4, o impacto saiu das quadras e ganhou as ruas, a cultura e o cinema. A silhueta deixou de ser só performance e passou a ocupar também o imaginário coletivo de uma geração.",
         archivalAlt: "Michael Jordan, 1989"
       }
     },

@@ -12,7 +12,7 @@ import { useReveal } from "./hooks/useReveal.js";
 import { useTweaks, TweaksPanel, TweakSection, TweakToggle } from "./components/TweaksPanel.jsx";
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "smoothScroll": true
+  "smoothScroll": false
 } /*EDITMODE-END*/;
 
 export default function App() {

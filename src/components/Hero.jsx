@@ -7,16 +7,29 @@ export default function Hero({ copy }) {
   const shoeRef = useRef(null);
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const coarsePointer = window.matchMedia("(pointer: coarse)");
+    if (reduceMotion.matches || coarsePointer.matches) {
+      return undefined;
+    }
+
+    let frame = 0;
     const onMove = (e) => {
       if (!heroRef.current || !shoeRef.current) return;
-      const r = heroRef.current.getBoundingClientRect();
-      if (r.bottom < 0) return;
       const x = (e.clientX / window.innerWidth - 0.5) * 18;
       const y = (e.clientY / window.innerHeight - 0.5) * 12;
-      shoeRef.current.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(-8deg)`;
+      if (frame) cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const r = heroRef.current.getBoundingClientRect();
+        if (r.bottom < 0) return;
+        shoeRef.current.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) rotate(-8deg)`;
+      });
     };
     window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("mousemove", onMove);
+    };
   }, []);
 
   return (

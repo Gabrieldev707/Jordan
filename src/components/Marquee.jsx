@@ -8,13 +8,22 @@ export default function Marquee({ items }) {
   const lastScroll = useRef(window.scrollY);
 
   useEffect(() => {
+    const shouldStayStatic = window.matchMedia("(prefers-reduced-motion: reduce), (max-width: 768px)");
+    if (shouldStayStatic.matches) {
+      return undefined;
+    }
+
     const onScroll = () => {
       const dy = window.scrollY - lastScroll.current;
       scrollV.current = dy;
       lastScroll.current = window.scrollY;
     };
-    window.addEventListener("scroll", onScroll);
-    let raf;
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    let raf = 0;
+    let active = false;
+    let inView = false;
+
     const tick = () => {
       const baseSpeed = 0.6;
       const boost = scrollV.current * 0.4;
@@ -27,11 +36,47 @@ export default function Marquee({ items }) {
         if (offset.current > 0) offset.current -= w;
         trackRef.current.style.transform = `translate3d(${offset.current}px, 0, 0)`;
       }
+      raf = active ? requestAnimationFrame(tick) : 0;
+    };
+
+    const start = () => {
+      if (raf) return;
+      active = true;
       raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
-    return () => {
+
+    const stop = () => {
+      active = false;
       cancelAnimationFrame(raf);
+      raf = 0;
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      inView = entries.some((entry) => entry.isIntersecting);
+      if (inView && !document.hidden) {
+        start();
+      } else {
+        stop();
+      }
+    }, { rootMargin: "120px" });
+
+    if (trackRef.current) {
+      io.observe(trackRef.current);
+    }
+
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        stop();
+      } else if (inView) {
+        start();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    return () => {
+      stop();
+      io.disconnect();
+      document.removeEventListener("visibilitychange", onVisibilityChange);
       window.removeEventListener("scroll", onScroll);
     };
   }, []);

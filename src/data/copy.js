@@ -4,6 +4,8 @@ export const COPY = {
       theFour: "The Four",
       contact: "Contact",
       languageLabel: "Switch language to Portuguese",
+      openMenuLabel: "Open navigation menu",
+      closeMenuLabel: "Close navigation menu",
     },
     hero: {
       title: {
@@ -24,7 +26,6 @@ export const COPY = {
     labels: {
       year: "Year",
       designedBy: "Designed by",
-      culturalMoment: "Cultural moment",
       colorway: "Colorway",
       size: "Size",
       soldOut: "sold out",
@@ -33,7 +34,7 @@ export const COPY = {
       worn: "Worn",
     },
     final: {
-      tag: "— end of journey",
+      tag: "",
       line1: "Four chapters.",
       line2: "One",
       line2Emphasis: "obsession",
@@ -53,6 +54,8 @@ export const COPY = {
       theFour: "Os Quatro",
       contact: "Contato",
       languageLabel: "Alternar idioma para inglês",
+      openMenuLabel: "Abrir menu de navegação",
+      closeMenuLabel: "Fechar menu de navegação",
     },
     hero: {
       title: {
@@ -73,7 +76,6 @@ export const COPY = {
     labels: {
       year: "Ano",
       designedBy: "Designer",
-      culturalMoment: "Momento cultural",
       colorway: "Cor",
       size: "Tamanho",
       soldOut: "esgotado",
@@ -82,7 +84,7 @@ export const COPY = {
       worn: "Usado",
     },
     final: {
-      tag: "— fim da jornada",
+      tag: "",
       line1: "Quatro capítulos.",
       line2: "Uma",
       line2Emphasis: "obsessão",

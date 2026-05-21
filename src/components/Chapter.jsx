@@ -109,11 +109,14 @@ export default function Chapter({ chapter, language, copy }) {
         )}
         <div className="moment-cultural-grid">
           <div className="quote reveal">
-            {cultural.title.split(' ').map((w, i, arr) =>
-            i === arr.length - 1 ?
-            <em key={i}>{w}</em> :
-            <span key={i}>{w}{' '}</span>
-            )}
+            <div className="cultural-title">
+              {cultural.title.split(' ').map((w, i, arr) =>
+              i === arr.length - 1 ?
+              <em key={i}>{w}</em> :
+              <span key={i}>{w}{' '}</span>
+              )}
+            </div>
+            <p className="cultural-caption">{cultural.caption || cultural.body}</p>
           </div>
           <div className="visual-tile reveal">
             {chapter.cultural.archivalPhoto && (
@@ -123,10 +126,9 @@ export default function Chapter({ chapter, language, copy }) {
               </>
             )}
             <div className="tile-num">{chapter.model}</div>
-            <div className="tile-cap">{cultural.body.split('.')[0]}.</div>
           </div>
           <div className="credit reveal">
-            - {copy.culturalMoment}, {chapter.year}
+            {cultural.footer}
           </div>
           <div className="cultural-marquee">
             <div className="cultural-marquee-track">
